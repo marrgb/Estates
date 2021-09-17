@@ -1,0 +1,40 @@
+<mvc:View
+	controllerName="com.ordago.estates.controller.App"
+	displayBlock="true"
+	height="100%"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Shell appWidthLimited="false">
+		<App
+			id="app"
+			busy="{appView>/busy}"
+			busyIndicatorDelay="{appView>/delay}">
+			<Page>
+				<customHeader>
+					<f:ShellBar
+						id="shellbar"
+						title="{i18n>title}"
+						secondTitle="User Logged"
+						homeIcon="./Tango-LOGO.png"
+						showSearch="false"
+						showCopilot="false"
+						showNotifications="true"
+						notificationsNumber="{msgCount>/msgCount}"
+						avatarPressed="onAvatarPressed">
+						<f:menu>
+							<Menu>
+								<MenuItem text="Flight booking" icon="sap-icon://flight" />
+								<MenuItem text="Car rental" icon="sap-icon://car-rental" />
+							</Menu>
+						</f:menu>
+						<f:profile>
+								<Avatar src="{ path: 'User>/photoURL' }" />
+						</f:profile>
+					</f:ShellBar>
+				</customHeader>
+				<f:FlexibleColumnLayout id="layout" stateChange="onStateChanged" layout="{appView/layout}" backgroundDesign="Solid"/>
+			</Page>
+		</App>
+	</Shell>
+</mvc:View>

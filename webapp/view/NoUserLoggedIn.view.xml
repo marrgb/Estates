@@ -1,0 +1,32 @@
+<mvc:View
+  controllerName="com.ordago.estates.controller.NoUserLoggedIn"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:f="sap.f"
+  xmlns="sap.m"
+  xmlns:layout= "sap.ui.layout"
+  height="100%">
+  <App>
+    <pages>
+      <Page>
+        <f:ShellBar
+          title="Lobby"
+          secondTitle="Not Logged in"
+          homeIcon="./resources/icons/Tango-LOGO.png"
+          showSearch="true"
+          showNotifications="true"
+          notificationsNumber="2"
+          avatarPressed="onAvatarPressed">
+          <f:menu>
+            <Menu>
+              <MenuItem text="Flight booking" icon="sap-icon://flight" />
+              <MenuItem text="Car rental" icon="sap-icon://car-rental" />
+            </Menu>
+          </f:menu>
+          <f:profile>
+            <f:Avatar initials="UI"/>
+          </f:profile>
+        </f:ShellBar>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>
